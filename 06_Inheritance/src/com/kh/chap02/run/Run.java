@@ -1,0 +1,50 @@
+package com.kh.chap02.run;
+
+import com.kh.chap02.model.vo.AosGame;
+import com.kh.chap02.model.vo.FpsGame;
+import com.kh.chap02.model.vo.Game;
+import com.kh.chap02.model.vo.RpgGame;
+
+public class Run {
+	
+
+	public static void main(String[] args) {
+		AosGame ag = new AosGame();
+		ag.setGameName("롤");
+		System.out.println(ag.getGameName());
+		RpgGame rg = new RpgGame("와우", "블리자드", 80);
+		System.out.println(rg.info());
+		FpsGame fg = new FpsGame("배틀그라운드", "크래프톤", 100);
+		System.out.println(fg.info());
+		
+		//자식 클래스에 메소드를 재정의 했을 경우
+		//☆★☆★☆★자식클래스에 재정의한 메소드가 우선권을 가져서 호출됨!!!!☆★☆★☆★☆★
+		/*
+		 * 상속
+		 * 
+		 * -중복된 코드를 공통의 클래스로 뽑아서 관리
+		 * => 코드를 적게쓰고 새 클래스를 만들 수 있음 => 생산성 향상, 가독성 향상
+		 * 
+		 * 객체 간의 결합도가 높아짐
+		 * 
+		 * 오늘날은 상속보다 합성(Composition)을 통해 구현하는 것을 권장함
+		 * 
+		 * 상속의 특징
+		 * 
+		 * -자바는 클래스간의 다중상속을 지원하지 않음(단일 상속만 가능)
+		 * 
+		 * - 명시되어있지 않지만 자바의 모든 클래스는 Object 클래스의 후손 클래스
+		 * (내가 만든 클래스, 원래 제공하는 클래스)
+		 * 
+		 * => 모든 객체는 Object 클래스에 존재하는 멤버를 사용할 수 있음
+		 * => Object 클래스에 존재하는 메소드가 마음에 안든다?
+		 * => Object 클래스에 메소드를 재정의 할 수 있음
+		 * 
+		 * 
+		 * 
+		 * 코드 만들고 깃허브에 올리고 콜라보하면 검수 해주심
+		 * 숙제는 어지간하면 잘 안내주심. 알아서 해야할듯
+		 * 
+		 */
+	}
+}
